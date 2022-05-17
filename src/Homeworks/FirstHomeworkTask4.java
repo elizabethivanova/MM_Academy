@@ -17,5 +17,6 @@ public class FirstHomeworkTask4 {
             }
             col--;
         }
+
     }
 }
