@@ -11,7 +11,7 @@ public class Triangle {
         int eagleA = scan.nextInt();
         System.out.println("Enter the side B:");
         int eagleB = scan.nextInt();
-        System.out.println("Enter the side C:");
+        System.out.println("Enter the side CW:");
         int eagleC = scan.nextInt();
 
         int result = eagleA + eagleB + eagleC;
