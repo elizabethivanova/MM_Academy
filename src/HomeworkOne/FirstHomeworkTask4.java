@@ -1,4 +1,4 @@
-package Homeworks;
+package HomeworkOne;
 
 import java.util.Scanner;
 
@@ -17,5 +17,6 @@ public class FirstHomeworkTask4 {
             }
             col--;
         }
+
     }
 }
