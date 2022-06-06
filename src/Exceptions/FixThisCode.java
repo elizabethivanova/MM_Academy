@@ -1,6 +1,7 @@
 package Exceptions;
 
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -14,7 +15,8 @@ public class FixThisCode {
                 fileWriter.write(text + "\n");
             }
             fileWriter.close();
-        } catch (Exception e) {
+        } catch (InputMismatchException | IOException e) {
+            System.out.println("Incorrect input!");
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
@@ -28,15 +30,16 @@ public class FixThisCode {
             System.out.println("How many time to print the text?");
             howManyTimesToPrintTheTextToFile = scanner.nextInt();
             if(howManyTimesToPrintTheTextToFile <= 0){
-                System.out.println("Add real number");
+                System.out.println("Not a real number");
             }else {
                 System.out.println("Enter the text:");
                 textToAdd = scanner.next();
                 printToFile(textToAdd, howManyTimesToPrintTheTextToFile);
             }
 
-        }catch (Exception e){
-            e.printStackTrace();
+        }catch (InputMismatchException e){
+            System.out.println("Please enter correct value!");
+            //e.printStackTrace();
         }
     }
 }
